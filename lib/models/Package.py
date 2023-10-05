@@ -108,3 +108,17 @@ class Package:
         CURSOR.execute(sql, (self.name, self.command,
                              self.language_id, self.id))
         CONN.commit()
+
+    def delete(self):
+
+        sql = """
+            DELETE FROM packages
+            WHERE id = ?
+        """
+
+        CURSOR.execute(sql, (self.id,))
+        CONN.commit()
+
+        del type(self).all[self.id]
+
+        self.id = None
