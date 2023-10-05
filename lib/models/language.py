@@ -62,3 +62,14 @@ class Language:
         language = cls(name)
         language.save()
         return language
+
+    def update(self):
+
+        sql = """
+            UPDATE languages
+            SET name = ?
+            WHERE id = ?
+        """
+
+        CURSOR.execute(sql, (self.name, self.id))
+        CONN.commit()
