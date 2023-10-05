@@ -87,3 +87,17 @@ class Language:
         del type(self).all[self.id]
 
         self.id = None
+
+    @classmethod
+    def instance_from_db(cls, row):
+
+        language = cls.all.get(row[0])
+
+        if language:
+            language.name = row[1]
+            language.location = row[2]
+        else:
+            language = cls(row[1], row[2])
+            language.id = row[0]
+            cls.all[language.id] = language
+        return language
