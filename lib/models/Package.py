@@ -49,3 +49,15 @@ class Package:
             raise ValueError(
                 "command must be a valid npm install command"
             )
+
+    @property
+    def language_id(self):
+        return self._language_id
+
+    @language_id.setter
+    def language_id(self, language_id):
+        if type(language_id) is int and Language.find_by_id(language_id):
+            self._language_id = language_id
+        else:
+            raise ValueError(
+                "language_id must reference a language in the database")
