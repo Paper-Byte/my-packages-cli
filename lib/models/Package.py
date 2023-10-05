@@ -61,3 +61,17 @@ class Package:
         else:
             raise ValueError(
                 "language_id must reference a language in the database")
+
+    @classmethod
+    def create_table(cls):
+
+        sql = """
+            CREATE TABLE IF NOT EXISTS packages (
+            id INTEGER PRIMARY KEY,
+            name TEXT,
+            command TEXT,
+            language_id INTEGER,
+            FOREIGN KEY (language_id) REFERENCES languages(id))
+        """
+        CURSOR.execute(sql)
+        CONN.commit()
