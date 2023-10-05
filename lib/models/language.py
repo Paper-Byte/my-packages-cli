@@ -56,3 +56,9 @@ class Language:
 
         self.id = CURSOR.lastrowid
         type(self).all[self.id] = self
+
+    @classmethod
+    def create(cls, name):
+        language = cls(name)
+        language.save()
+        return language
