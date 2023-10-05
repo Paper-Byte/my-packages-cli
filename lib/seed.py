@@ -36,11 +36,11 @@ def seed_database():
 
 
 with progress:
-    task1 = progress.add_task(
+    seeding = progress.add_task(
         "[italic spring_green3]Seeding database[/italic spring_green3][dark_turqoise]...[/dark_turqoise]", total=20)
 
     while not progress.finished:
-        progress.update(task1, advance=0.5)
+        progress.update(seeding, advance=0.5)
         time.sleep(0.02)
 
 seed_database()
