@@ -73,3 +73,17 @@ class Language:
 
         CURSOR.execute(sql, (self.name, self.id))
         CONN.commit()
+
+    def delete(self):
+
+        sql = """
+            DELETE FROM languages
+            WHERE id = ?
+        """
+
+        CURSOR.execute(sql, (self.id,))
+        CONN.commit()
+
+        del type(self).all[self.id]
+
+        self.id = None
