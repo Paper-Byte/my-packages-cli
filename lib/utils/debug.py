@@ -4,7 +4,7 @@ from models.language import Language
 from models.package import Package
 import time
 import ipdb
-from models.custom_progresses import debug_progress
+from custom_progresses import progress
 
 
 def reset_database():
@@ -28,11 +28,11 @@ def reset_database():
     Package.create("PushJS", "npm install push.js --save", vainilla_js.id)
 
 
-with debug_progress:
-    debugging = debug_progress.add_task(
+with progress:
+    debugging = progress.add_task(
         "[italic bright_red]Creating clean debug environment...", total=20)
 
-    while not debug_progress.finished:
-        debug_progress.update(debugging, advance=0.5)
+    while not progress.finished:
+        progress.update(debugging, advance=0.5)
         time.sleep(0.02)
 ipdb.set_trace()

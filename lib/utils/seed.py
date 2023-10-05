@@ -3,7 +3,7 @@
 from models.language import Language
 from models.package import Package
 from rich import print
-from models.custom_progresses import seed_progress
+from custom_progresses import progress
 import time
 
 
@@ -28,12 +28,12 @@ def seed_database():
     Package.create("PushJS", "npm install push.js --save", vainilla_js.id)
 
 
-with seed_progress:
-    seeding = seed_progress.add_task(
+with progress:
+    seeding = progress.add_task(
         "[italic spring_green3]Seeding database[/italic spring_green3][dark_turqoise]...[/dark_turqoise]", total=20)
 
-    while not seed_progress.finished:
-        seed_progress.update(seeding, advance=0.5)
+    while not progress.finished:
+        progress.update(seeding, advance=0.5)
         time.sleep(0.02)
 
 seed_database()

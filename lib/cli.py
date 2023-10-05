@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from helpers import (
+from lib.helpers.menu_helpers import (
     exit_program
 )
 from art import tprint
