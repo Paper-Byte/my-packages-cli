@@ -137,3 +137,19 @@ class Language:
 
         row = CURSOR.execute(sql, (name,)).fetchone()
         return cls.instance_from_db(row) if row else None
+
+    def packages(self):
+
+        from models.package import Package
+
+        sql = """
+            SELECT *
+            FROM packages
+            WHERE language_id = ?
+        """
+
+        CURSOR.execute(sql, (self.id,))
+
+        rows = CURSOR.fetchall()
+
+        return [Package.instance_from_db(row) for row in rows]
