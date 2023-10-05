@@ -101,3 +101,15 @@ class Language:
             language.id = row[0]
             cls.all[language.id] = language
         return language
+
+    @classmethod
+    def get_all(cls):
+
+        sql = """
+            SELECT *
+            FROM languages
+        """
+
+        rows = CURSOR.execute(sql).fetchall()
+
+        return [cls.instance_from_db(row) for row in rows]
