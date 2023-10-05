@@ -122,3 +122,10 @@ class Package:
         del type(self).all[self.id]
 
         self.id = None
+
+    @classmethod
+    def create(cls, name, command, language_id):
+
+        package = cls(name, command, language_id)
+        package.save()
+        return package
