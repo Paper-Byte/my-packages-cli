@@ -7,6 +7,7 @@ name = "pypi"
 ipdb = "*"
 click = "*"
 rich = "*"
+art = "*"
 
 [dev-packages]
 

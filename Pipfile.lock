@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "cb4fab845fce323b61acdf18c7ac749c61f887cab2d1f7ce8d668cd24c84e5f5"
+            "sha256": "695d698f0ad2fafe7faca3cc5676bf6fb57ad161efe02eda9dd8807fa1e5c60a"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -23,6 +23,14 @@
             ],
             "markers": "sys_platform == 'darwin'",
             "version": "==0.1.3"
+        },
+        "art": {
+            "hashes": [
+                "sha256:159819c418001467f8d79616fa0814277deac97c8a363d1eb3e7c0a31526bfc3",
+                "sha256:6ab3031e3b7710039e73497b0e750cadfe04d4c1279ce3a123500dbafb9e1b64"
+            ],
+            "index": "pypi",
+            "version": "==6.1"
         },
         "asttokens": {
             "hashes": [
