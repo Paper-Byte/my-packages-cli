@@ -97,3 +97,14 @@ class Package:
 
         self.id = CURSOR.lastrowid
         type(self).all[self.id] = self
+
+    def update(self):
+
+        sql = """
+            UPDATE packages
+            SET name = ?, command = ?, language_id = ?
+            WHERE id = ?
+        """
+        CURSOR.execute(sql, (self.name, self.command,
+                             self.language_id, self.id))
+        CONN.commit()
