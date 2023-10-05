@@ -43,3 +43,16 @@ class Language:
         """
         CURSOR.execute(sql)
         CONN.commit()
+
+    def save(self):
+
+        sql = """
+            INSERT INTO languages (name, location)
+            VALUES (?, ?)
+        """
+
+        CURSOR.execute(sql, (self.name, self.location))
+        CONN.commit()
+
+        self.id = CURSOR.lastrowid
+        type(self).all[self.id] = self
