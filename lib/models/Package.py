@@ -30,3 +30,22 @@ class Package:
             raise ValueError(
                 "Name must be a non-empty string"
             )
+
+    @property
+    def command(self):
+        return self._command
+
+    @command.setter
+    def command(self, command):
+        command_list = command.split()
+        if ((command_list[0] == 'npm') and (command_list[1] == 'install')):
+            if isinstance(command, str) and len(command):
+                self._command = command
+            else:
+                raise ValueError(
+                    "command must be a non-empty string"
+                )
+        else:
+            raise ValueError(
+                "command must be a valid npm install command"
+            )
