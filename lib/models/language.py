@@ -47,11 +47,11 @@ class Language:
     def save(self):
 
         sql = """
-            INSERT INTO languages (name, location)
-            VALUES (?, ?)
+            INSERT INTO languages (name)
+            VALUES (?)
         """
 
-        CURSOR.execute(sql, (self.name, self.location))
+        CURSOR.execute(sql, (self.name,))
         CONN.commit()
 
         self.id = CURSOR.lastrowid
@@ -95,9 +95,8 @@ class Language:
 
         if language:
             language.name = row[1]
-            language.location = row[2]
         else:
-            language = cls(row[1], row[2])
+            language = cls(row[1])
             language.id = row[0]
             cls.all[language.id] = language
         return language

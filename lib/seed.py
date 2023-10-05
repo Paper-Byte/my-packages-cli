@@ -2,12 +2,19 @@
 
 from models.language import Language
 from models.package import Package
-from rich.progress import track
+from rich import print
+from rich.progress import Progress,  SpinnerColumn, BarColumn, TaskProgressColumn, TextColumn
 import time
-import ipdb
+
+progress = Progress(
+    TextColumn("[progress.description]{task.description}"),
+    SpinnerColumn(),
+    BarColumn(),
+    TaskProgressColumn()
+)
 
 
-def reset_database():
+def seed_database():
     Package.drop_table()
     Language.drop_table()
     Language.create_table()
@@ -28,7 +35,13 @@ def reset_database():
     Package.create("PushJS", "npm install push.js --save", vainilla_js.id)
 
 
-reset_database()
-for i in track(range(1), description='Starting up clean debug...'):
-    time.sleep(.20)
-ipdb.set_trace()
+with progress:
+    task1 = progress.add_task(
+        "[italic spring_green3]Seeding database[/italic spring_green3][dark_turqoise]...[/dark_turqoise]", total=20)
+
+    while not progress.finished:
+        progress.update(task1, advance=0.5)
+        time.sleep(0.02)
+
+seed_database()
+print("[bold spring_green3]Seeded database!", ":seedling:")

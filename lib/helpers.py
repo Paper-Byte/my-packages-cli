@@ -4,7 +4,7 @@ from rich import print
 
 
 def exit_program():
-    print("Goodbye!")
+    print("Goodbye!", ":waving hand:")
     exit()
 
 # Language helpers
