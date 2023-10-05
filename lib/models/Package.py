@@ -129,3 +129,18 @@ class Package:
         package = cls(name, command, language_id)
         package.save()
         return package
+
+    @classmethod
+    def instance_from_db(cls, row):
+
+        package = cls.all.get(row[0])
+
+        if package:
+            package.name = row[1]
+            package.command = row[2]
+            package.language_id = row[3]
+        else:
+            package = cls(row[1], row[2], row[3])
+            package.id = row[0]
+            cls.all[package.id] = package
+        return package
