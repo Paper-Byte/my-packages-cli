@@ -17,3 +17,16 @@ class Package:
             f"<Package {self.id}: {self.name}, {self.command}, " +
             f"Language ID: {self.language_id}>"
         )
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        if isinstance(name, str) and len(name):
+            self._name = name
+        else:
+            raise ValueError(
+                "Name must be a non-empty string"
+            )
