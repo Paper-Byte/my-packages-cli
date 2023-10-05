@@ -24,3 +24,14 @@ class Language:
             raise ValueError(
                 "Name must be a non-empty string"
             )
+
+    @classmethod
+    def create_table(cls):
+        sql = """
+            CREATE TABLE IF NOT EXISTS languages (
+            id INTEGER PRIMARY KEY,
+            name TEXT
+            )
+        """
+        CURSOR.execute(sql)
+        CONN.commit()
