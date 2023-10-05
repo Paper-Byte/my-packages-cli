@@ -84,3 +84,16 @@ class Package:
         """
         CURSOR.execute(sql)
         CONN.commit()
+
+    def save(self):
+
+        sql = """
+                INSERT INTO packages (name, command, language_id)
+                VALUES (?, ?, ?)
+        """
+
+        CURSOR.execute(sql, (self.name, self.command, self.language_id))
+        CONN.commit()
+
+        self.id = CURSOR.lastrowid
+        type(self).all[self.id] = self
