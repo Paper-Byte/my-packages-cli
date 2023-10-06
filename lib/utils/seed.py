@@ -1,6 +1,6 @@
 from models.language import Language
 from models.package import Package
-from menu.menu_helpers import clear_screen
+from menu_helpers.menu_utils import clear_screen
 from ascii_titles import DEVELOPER
 from rich import print
 from utils.custom_progresses import seed_progress

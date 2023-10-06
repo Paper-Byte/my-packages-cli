@@ -1,51 +1,14 @@
 #!/usr/bin/env python3
 
-from menu.menu_helpers import clear_screen, exit_program
-from menu.package_menu_helpers import *
+from menu_helpers.menu_utils import clear_screen, exit_program
+import menus.main_menu  # main_menu()
 from utils.seed import seed_database
 from utils.debug import reset_database
 from rich import print
 from ascii_titles import *
 
-
-def main_menu():
-    clear_screen()
-    print(f"[bold dark_turquoise]{TITLE}")
-    while True:
-        main_menu_options()
-        choice = input("--> ")
-        if (choice == "0"):
-            exit_program()
-        elif (choice == "1"):
-            language_menu()
-        elif (choice == "2"):
-            package_menu()
-        elif (choice == "3"):
-            developer_menu()
-        else:
-            print(f"[bold dark_turquoise]{TITLE}")
-            print(":white_exclamation_mark:",
-                  "[red blink][bold]Error:[/bold] Invalid option, try again.")
-
-
-def language_menu():
-    clear_screen()
-    print(f"[bold dark_turquoise]{LANGUAGE}")
-    while True:
-        language_menu_options()
-        choice = input("--> ")
-        if (choice == "0"):
-            main_menu()
-        elif (choice == "1"):
-            pass
-        elif (choice == "2"):
-            pass
-        elif (choice == "3"):
-            pass
-        else:
-            print(f"[bold dark_turquoise]{LANGUAGE}")
-            print(":white_exclamation_mark:",
-                  "[red blink][bold]Error:[/bold] Invalid option, try again.")
+# global directory VARIABLE --> /Development/
+#
 
 
 def package_menu():
@@ -94,24 +57,6 @@ def developer_menu():
                   "[red blink][bold]Error:[/bold] Invalid option, try again.")
 
 
-def main_menu_options():
-    print('[bold][grey53]0:[/bold][/grey53][dark_turquoise]Exit the program', ':stop_sign:')
-    print('[bold][grey53]1:[/bold][/grey53][dark_turquoise]Access Languages DB', ':robot:')
-    print('[bold][grey53]2:[/bold][/grey53][dark_turquoise]Access Packages DB', ':robot:')
-    print('[bold][grey53]3:[/bold][/grey53][dark_turquoise]Developer Tools', ':robot:')
-
-
-def language_menu_options():
-    print('[bold][grey53]0:[/bold][/grey53][dark_turquoise]Back to main menu',
-          ':right_arrow_curving_left:')
-    print('[bold][grey53]1:[/bold][/grey53][dark_turquoise]List all Languages', ':robot:')
-    print('[bold][grey53]2:[/bold][/grey53][dark_turquoise]Find Language by name', ':robot:')
-    print('[bold][grey53]3:[/bold][/grey53][dark_turquoise]Find Language by ID', ':robot:')
-    print('[bold][grey53]4:[/bold][/grey53][dark_turquoise]Create Language', ':robot:')
-    print('[bold][grey53]5:[/bold][/grey53][dark_turquoise]Update Language', ':robot:')
-    print('[bold][grey53]6:[/bold][/grey53][dark_turquoise]Delete Language', ':robot:')
-
-
 def package_menu_options():
     print('[bold][grey53]0:[/bold][/grey53][dark_turquoise]Back to main menu',
           ':right_arrow_curving_left:')
@@ -132,4 +77,4 @@ def developer_menu_options():
 
 
 if __name__ == "__main__":
-    main_menu()
+    menus.main_menu.main_menu()
