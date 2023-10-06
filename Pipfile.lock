@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "695d698f0ad2fafe7faca3cc5676bf6fb57ad161efe02eda9dd8807fa1e5c60a"
+            "sha256": "5325e15ae79c213c252a1799bf8663f42f6fc9eded537657dab98e15bdfcadd6"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -23,14 +23,6 @@
             ],
             "markers": "sys_platform == 'darwin'",
             "version": "==0.1.3"
-        },
-        "art": {
-            "hashes": [
-                "sha256:159819c418001467f8d79616fa0814277deac97c8a363d1eb3e7c0a31526bfc3",
-                "sha256:6ab3031e3b7710039e73497b0e750cadfe04d4c1279ce3a123500dbafb9e1b64"
-            ],
-            "index": "pypi",
-            "version": "==6.1"
         },
         "asttokens": {
             "hashes": [
@@ -161,6 +153,14 @@
                 "sha256:2b45320af6dfaa1750f543d714b6d1c520a1688dec6fd24d339063ce0aaa9ac3"
             ],
             "version": "==0.2.2"
+        },
+        "pyfiglet": {
+            "hashes": [
+                "sha256:c6c2321755d09267b438ec7b936825a4910fec696292139e664ca8670e103639",
+                "sha256:d555bcea17fbeaf70eaefa48bb119352487e629c9b56f30f383e2c62dd67a01c"
+            ],
+            "index": "pypi",
+            "version": "==0.8.post1"
         },
         "pygments": {
             "hashes": [

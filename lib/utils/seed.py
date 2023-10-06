@@ -3,7 +3,7 @@
 from models.language import Language
 from models.package import Package
 from rich import print
-from custom_progresses import progress
+from lib.utils.custom_progresses import progress
 import time
 
 

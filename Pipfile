@@ -7,7 +7,7 @@ name = "pypi"
 ipdb = "*"
 click = "*"
 rich = "*"
-art = "*"
+pyfiglet = "*"
 
 [dev-packages]
 

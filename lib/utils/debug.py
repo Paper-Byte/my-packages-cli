@@ -4,7 +4,7 @@ from models.language import Language
 from models.package import Package
 import time
 import ipdb
-from custom_progresses import progress
+from lib.utils.custom_progresses import progress
 
 
 def reset_database():

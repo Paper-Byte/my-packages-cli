@@ -1,5 +1,5 @@
-from models import Language
-from models import Package
+from models.language import Language
+from models.package import Package
 from utils.custom_progresses import progress
 from rich import print
 import time
