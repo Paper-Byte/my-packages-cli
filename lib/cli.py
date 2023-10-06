@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from menu.menu_helpers import clear_screen, exit_program
+from menu.package_menu_helpers import *
 from utils.seed import seed_database
 from utils.debug import reset_database
 from rich import print
@@ -56,11 +57,19 @@ def package_menu():
         if (choice == "0"):
             main_menu()
         elif (choice == "1"):
-            pass
+            list_packages()
         elif (choice == "2"):
-            pass
+            find_package_by_name()
         elif (choice == "3"):
-            pass
+            find_package_by_id()
+        elif (choice == "4"):
+            create_package()
+        elif (choice == "5"):
+            update_package()
+        elif (choice == "6"):
+            delete_package()
+        elif (choice == "7"):
+            list_language_packages()
         else:
             print(f"[bold dark_turquoise]{PACKAGE}")
             print(":white_exclamation_mark:",
