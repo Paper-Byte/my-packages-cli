@@ -1,7 +1,7 @@
 from menu_helpers.menu_utils import *  # clear_screen() , exit_program()
 from ascii_titles import TITLE
-import menus.languages_main_menu  # language_main_menu()
-import menus.packages_main_menu  # packages_main_menu()
+import menus.language_menus.languages_main_menu  # languages_main_menu()
+import menus.package_menus.packages_main_menu  # packages_main_menu()
 import menus.dev_menu  # dev_menu()
 
 
@@ -14,9 +14,9 @@ def main_menu():
         if ((choice.lower() == "exit") or (choice.lower() == "e")):
             exit_program()
         elif ((choice.lower() == "lang") or (choice.lower() == "l")):
-            menus.languages_main_menu.language_main_menu()
+            menus.language_menus.languages_main_menu.languages_main_menu()
         elif ((choice.lower() == "pack") or (choice.lower() == "p")):
-            menus.packages_main_menu.packages_main_menu()
+            menus.package_menus.packages_main_menu.packages_main_menu()
         elif ((choice.lower() == "dev") or (choice.lower() == "d")):
             menus.dev_menu.dev_menu()
         else:
