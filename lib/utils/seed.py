@@ -1,9 +1,9 @@
-#!/usr/bin/env python3
-
 from models.language import Language
 from models.package import Package
+from menu.menu_helpers import clear_screen
+from ascii_titles import DEVELOPER
 from rich import print
-from lib.utils.custom_progresses import progress
+from utils.custom_progresses import seed_progress
 import time
 
 
@@ -27,14 +27,13 @@ def seed_database():
     Package.create("HowlerJS", "npm install howler", vainilla_js.id)
     Package.create("PushJS", "npm install push.js --save", vainilla_js.id)
 
+    with seed_progress:
+        seeding = seed_progress.add_task(
+            "[italic spring_green3]Seeding database[/italic spring_green3][dark_turqoise]...[/dark_turqoise]", total=20)
 
-with progress:
-    seeding = progress.add_task(
-        "[italic spring_green3]Seeding database[/italic spring_green3][dark_turqoise]...[/dark_turqoise]", total=20)
-
-    while not progress.finished:
-        progress.update(seeding, advance=0.5)
-        time.sleep(0.02)
-
-seed_database()
-print("[bold spring_green3]Seeded database!", ":seedling:")
+        while not seed_progress.finished:
+            seed_progress.update(seeding, advance=0.5)
+            time.sleep(0.02)
+    clear_screen()
+    print(f"[bold dark_turquoise]{DEVELOPER}")
+    print("[bold spring_green3]Seeded database!", ":seedling:")

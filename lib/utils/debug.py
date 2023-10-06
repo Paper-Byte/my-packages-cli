@@ -1,10 +1,8 @@
-#!/usr/bin/env python3
-
 from models.language import Language
 from models.package import Package
 import time
 import ipdb
-from lib.utils.custom_progresses import progress
+from utils.custom_progresses import debug_progress
 
 
 def reset_database():
@@ -27,12 +25,11 @@ def reset_database():
     Package.create("HowlerJS", "npm install howler", vainilla_js.id)
     Package.create("PushJS", "npm install push.js --save", vainilla_js.id)
 
+    with debug_progress:
+        debugging = debug_progress.add_task(
+            "[italic bright_red]Creating clean debug environment...", total=20)
 
-with progress:
-    debugging = progress.add_task(
-        "[italic bright_red]Creating clean debug environment...", total=20)
-
-    while not progress.finished:
-        progress.update(debugging, advance=0.5)
-        time.sleep(0.02)
-ipdb.set_trace()
+        while not debug_progress.finished:
+            debug_progress.update(debugging, advance=0.5)
+            time.sleep(0.02)
+    ipdb.set_trace()
