@@ -1,8 +1,8 @@
 from models.language import Language
 from models.package import Package
+from utils.custom_progresses import debug_progress
 import time
 import ipdb
-from utils.custom_progresses import debug_progress
 
 
 def reset_database():

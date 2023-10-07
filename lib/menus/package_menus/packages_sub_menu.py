@@ -2,8 +2,9 @@ from models.package import Package
 from models.language import Language
 from rich import print
 from menu_helpers.menu_utils import clear_screen
-import menus.package_menus.packages_main_menu  # packages_main_menu()
-import menus.package_menus.packages_name_menu  # packages_name_menu()
+import menus.package_menus.packages_main_menu
+import menus.package_menus.packages_name_menu
+import menus.package_menus.packages_command_menu
 import pyfiglet
 
 
@@ -22,18 +23,20 @@ def packages_sub_menu(package):
         elif ((choice.lower() == "n") or (choice.lower() == "name")):
             menus.package_menus.packages_name_menu.packages_name_menu(package)
         elif ((choice.lower() == "c") or (choice.lower() == "com")):
-            pass
+            menus.package_menus.packages_command_menu.packages_command_menu(
+                package)
         elif ((choice.lower() == "l") or (choice.lower() == "lan")):
             pass
         elif ((choice.lower() == "d") or (choice.lower() == "del")):
-            print(":white_exclamation_mark:", "[red blink] Are you sure? Y/N")
-            if (choice.lower() == 'y'):
-                pass
-            elif (choice.lower() == 'n'):
-                packages_sub_menu(package)
-            else:
-                print(":white_exclamation_mark:",
-                      "[red blink][bold]Error:[/bold] Invalid option, try again.")
+            while True:
+                warning_message()
+                if (choice.lower() == 'y'):
+                    pass
+                elif (choice.lower() == 'n'):
+                    packages_sub_menu(package)
+                else:
+                    print(":white_exclamation_mark:",
+                          "[red blink][bold]Error:[/bold] Invalid option, try again.")
         else:
             print(f"[bold dark_turquoise]{PACKAGE_TITLE}")
             print(":white_exclamation_mark:",
@@ -62,3 +65,8 @@ def packages_crud_menu_options(package, PACKAGE_OWNER):
         '[dark_turquoise]*[/dark_turquoise]  [bold][dark_turquoise]"del" [magenta][italic]OR[/italic][/magenta] "d"[/bold][/dark_turquoise][grey53] to delete the package', ':robot:')
     print("[grey53]*[/grey53]")
     print("[dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53]")
+
+
+def warning_message():
+    print(":white_exclamation_mark:",
+          "[red blink] Are you sure? This will reset the databse to default! Y/N")

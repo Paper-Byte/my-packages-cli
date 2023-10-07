@@ -15,9 +15,22 @@ def dev_menu():
         if ((choice.lower() == "b") or (choice.lower() == "back")):
             menus.main_menu.main_menu()
         elif ((choice.lower() == "s") or (choice.lower() == "seed")):
-            seed_database()
+            while True:
+                warning_message()
+                choice = input("Y/N :> ")
+                if (choice.lower() == 'y'):
+                    seed_database()
+                    dev_menu()
+                elif (choice.lower() == 'n'):
+                    dev_menu()
         elif ((choice.lower() == "r") or (choice.lower() == "reset")):
-            reset_database()
+            while True:
+                warning_message()
+                choice = input("Y/N :> ")
+                if (choice.lower() == 'y'):
+                    reset_database()
+                elif (choice.lower() == 'n'):
+                    dev_menu()
         else:
             print(f"[bold dark_turquoise]{DEVELOPER}")
             print(":white_exclamation_mark:",
@@ -35,3 +48,8 @@ def developer_menu_options():
           ':right_arrow_curving_left:')
     print("[grey53]*[/grey53]")
     print("[dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53]")
+
+
+def warning_message():
+    print(":white_exclamation_mark:",
+          "[red blink] Are you sure? This will reset the databse to default! Y/N")
