@@ -1,6 +1,5 @@
 from rich import print
 from menu_helpers.menu_utils import clear_screen
-from utils.custom_progresses import new_package_command_progress
 import menu_helpers.packages_menu_helpers  # update_package_command()
 import menus.package_menus.packages_sub_menu  # packages_sub_menu()
 import pyfiglet

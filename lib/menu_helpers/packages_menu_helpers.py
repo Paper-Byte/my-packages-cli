@@ -1,5 +1,4 @@
-from utils.custom_progresses import new_package_name_progress
-from utils.custom_progresses import new_package_command_progress
+from utils.custom_progresses import new_progress
 from menu_helpers.menu_utils import clear_screen
 from rich import print
 import menus.package_menus.packages_sub_menu  # packages_sub_menu()
@@ -7,12 +6,12 @@ import time
 
 
 def update_package_name(package, choice):
-    package_name_progress = new_package_name_progress()
-    with package_name_progress:
-        name = package_name_progress.add_task(
+    new_name_progress = new_progress()
+    with new_name_progress:
+        name = new_name_progress.add_task(
             "[italic][magenta]Updating package's name[/italic][magenta][dark_turqoise]...[/dark_turqoise]", total=20)
-        while not package_name_progress.finished:
-            package_name_progress.update(name, advance=0.5)
+        while not new_name_progress.finished:
+            new_name_progress.update(name, advance=0.5)
             time.sleep(0.02)
     clear_screen()
     package.name = choice
@@ -23,12 +22,12 @@ def update_package_name(package, choice):
 
 
 def update_package_command(package, choice):
-    package_command_progress = new_package_command_progress()
-    with package_command_progress:
-        command = package_command_progress.add_task(
+    new_command_progress = new_progress()
+    with new_command_progress:
+        command = new_command_progress.add_task(
             "[italic][magenta]Updating package's command[/italic][magenta][dark_turqoise]...[/dark_turqoise]", total=20)
-        while not package_command_progress.finished:
-            package_command_progress.update(command, advance=0.5)
+        while not new_command_progress.finished:
+            new_command_progress.update(command, advance=0.5)
             time.sleep(0.02)
     clear_screen()
     package.command = choice
@@ -36,3 +35,15 @@ def update_package_command(package, choice):
     print(f"[bold][magenta]Package command updated to '{choice}'!")
     time.sleep(2)
     menus.package_menus.packages_sub_menu.packages_sub_menu(package)
+
+
+def update_package_language(package, language):
+    new_language_progress = new_progress()
+    with new_language_progress:
+        language = new_language_progress.add_task(
+            "[italic][magenta]Updating package's command[/italic][magenta][dark_turqoise]...[/dark_turqoise]", total=20)
+        while not new_language_progress.finished:
+            new_language_progress.update(language, advance=0.5)
+            time.sleep(0.02)
+        clear_screen()
+        package.language_id = language
