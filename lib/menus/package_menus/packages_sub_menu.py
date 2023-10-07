@@ -3,6 +3,7 @@ from models.language import Language
 from rich import print
 from menu_helpers.menu_utils import clear_screen
 import menus.package_menus.packages_main_menu  # packages_main_menu()
+import menus.package_menus.packages_name_menu  # packages_name_menu()
 import pyfiglet
 
 
@@ -19,7 +20,7 @@ def packages_sub_menu(package):
         if ((choice.lower() == "b") or (choice.lower() == "back")):
             menus.package_menus.packages_main_menu.packages_main_menu()
         elif ((choice.lower() == "n") or (choice.lower() == "name")):
-            pass
+            menus.package_menus.packages_name_menu.packages_name_menu(package)
         elif ((choice.lower() == "c") or (choice.lower() == "com")):
             pass
         elif ((choice.lower() == "l") or (choice.lower() == "lan")):

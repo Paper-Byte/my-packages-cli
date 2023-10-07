@@ -11,7 +11,9 @@ def new_package_name_progress():
         BarColumn(),
         TaskProgressColumn()
     )
+    global NEW_PACKAGE_NAME_LIST
     NEW_PACKAGE_NAME_LIST.append(new_progress)
+    global PACKAGE_NAME_COUNT
     PACKAGE_NAME_COUNT += 1
     return NEW_PACKAGE_NAME_LIST[PACKAGE_NAME_COUNT]
 
