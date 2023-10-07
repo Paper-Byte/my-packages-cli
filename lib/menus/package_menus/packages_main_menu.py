@@ -2,8 +2,9 @@ from models.package import Package
 from rich import print
 from menu_helpers.menu_utils import clear_screen
 from ascii_titles import PACKAGE
-import menus.package_menus.packages_sub_menu  # packages_sub_menu()
-import menus.main_menu  # main_menu()
+import menus.package_menus.packages_sub_menu
+import menus.package_menus.packages_name_create_menu
+import menus.main_menu
 
 
 def packages_main_menu():
@@ -14,6 +15,8 @@ def packages_main_menu():
         choice = input("--> ")
         if ((choice.lower() == "b") or (choice.lower() == "back")):
             menus.main_menu.main_menu()
+        elif ((choice.lower() == "c") or (choice.lower() == "create")):
+            menus.package_menus.packages_name_create_menu.packages_name_create_menu()
         elif (choice.isnumeric()):
             if (Package.find_by_id(int(choice))):
                 menus.package_menus.packages_sub_menu.packages_sub_menu(
@@ -22,7 +25,6 @@ def packages_main_menu():
                 print(f"[bold dark_turquoise]{PACKAGE}")
                 print(":white_exclamation_mark:",
                       "[red blink][bold]Error:[/bold] Invalid package option, try again.")
-
         else:
             print(f"[bold dark_turquoise]{PACKAGE}")
             print(":white_exclamation_mark:",

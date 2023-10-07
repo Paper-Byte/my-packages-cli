@@ -1,4 +1,3 @@
-from models.package import Package
 from models.language import Language
 from rich import print
 from menu_helpers.menu_utils import clear_screen
@@ -17,7 +16,7 @@ def packages_sub_menu(package):
     PACKAGE_OWNER = Language.find_by_id(package.language_id)
 
     clear_screen()
-    print(f"[bold dark_turquoise]{PACKAGE_TITLE}")
+    print(f"[bold][dark_turquoise]{PACKAGE_TITLE}")
     while True:
         packages_crud_menu_options(package, PACKAGE_OWNER)
         choice = input("--> ")
@@ -53,11 +52,11 @@ def packages_sub_menu(package):
                     packages_sub_menu(package)
                 else:
                     print(":white_exclamation_mark:",
-                          "[red blink][bold]Error:[/bold] Invalid option, try again.")
+                          "[red blink][bold]Error:[/bold] Invalid package option, try again.")
         else:
             print(f"[bold dark_turquoise]{PACKAGE_TITLE}")
             print(":white_exclamation_mark:",
-                  "[red blink][bold]Error:[/bold] Invalid option, try again.")
+                  "[red blink][bold]Error:[/bold] Invalid command, try again.")
 
 
 def packages_crud_menu_options(package, PACKAGE_OWNER):
