@@ -1,5 +1,6 @@
 from utils.custom_progresses import new_progress
 from menu_helpers.menu_utils import clear_screen
+from models.language import Language
 from rich import print
 import menus.package_menus.packages_sub_menu  # packages_sub_menu()
 import time
@@ -37,13 +38,19 @@ def update_package_command(package, choice):
     menus.package_menus.packages_sub_menu.packages_sub_menu(package)
 
 
-def update_package_language(package, language):
+def update_package_language(package, choice):
+    current_owner = Language.find_by_id(choice)
     new_language_progress = new_progress()
     with new_language_progress:
         language = new_language_progress.add_task(
-            "[italic][magenta]Updating package's command[/italic][magenta][dark_turqoise]...[/dark_turqoise]", total=20)
+            "[italic][magenta]Updating package's language[/italic][magenta][dark_turqoise]...[/dark_turqoise]", total=20)
         while not new_language_progress.finished:
             new_language_progress.update(language, advance=0.5)
             time.sleep(0.02)
-        clear_screen()
-        package.language_id = language
+    clear_screen()
+    package.language_id = current_owner.id
+    package.update()
+    print(
+        f"[bold][magenta]Package language updated to '{current_owner.name}'!")
+    time.sleep(2)
+    menus.package_menus.packages_sub_menu.packages_sub_menu(package)

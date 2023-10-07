@@ -2,10 +2,13 @@ from models.package import Package
 from models.language import Language
 from rich import print
 from menu_helpers.menu_utils import clear_screen
+from utils.custom_progresses import new_progress
 import menus.package_menus.packages_main_menu
 import menus.package_menus.packages_name_menu
 import menus.package_menus.packages_command_menu
+import menus.package_menus.packages_language_menu
 import pyfiglet
+import time
 
 
 def packages_sub_menu(package):
@@ -26,12 +29,26 @@ def packages_sub_menu(package):
             menus.package_menus.packages_command_menu.packages_command_menu(
                 package)
         elif ((choice.lower() == "l") or (choice.lower() == "lan")):
-            pass
+            menus.package_menus.packages_language_menu.packages_language_menu(
+                package)
         elif ((choice.lower() == "d") or (choice.lower() == "del")):
             while True:
                 warning_message()
+                choice = input("Y/N :> ")
                 if (choice.lower() == 'y'):
-                    pass
+                    package_del_progress = new_progress()
+                    with package_del_progress:
+                        delete = package_del_progress.add_task(
+                            "[italic][magenta]Deleting package[/italic][magenta][dark_turqoise]...[/dark_turqoise]", total=20)
+                    while not package_del_progress.finished:
+                        package_del_progress.update(delete, advance=0.5)
+                        time.sleep(0.02)
+                    clear_screen()
+                    package.delete()
+                    print(
+                        f"[bold][magenta]Package was deleted!")
+                    time.sleep(2)
+                    menus.package_menus.packages_main_menu.packages_main_menu()
                 elif (choice.lower() == 'n'):
                     packages_sub_menu(package)
                 else:
@@ -69,4 +86,4 @@ def packages_crud_menu_options(package, PACKAGE_OWNER):
 
 def warning_message():
     print(":white_exclamation_mark:",
-          "[red blink] Are you sure? This will reset the databse to default! Y/N")
+          "[red blink] Are you sure? This will delete the package and all references to it! Y/N")

@@ -16,7 +16,7 @@ def packages_name_menu(package):
         choice = input("--> ")
         if ((choice.lower() == "b") or (choice.lower() == "back")):
             menus.package_menus.packages_sub_menu.packages_sub_menu(package)
-        else:
+        elif (not choice.isnumeric()):
             if (len(choice) <= 20):
                 menu_helpers.packages_menu_helpers.update_package_name(
                     package, choice)
@@ -24,6 +24,10 @@ def packages_name_menu(package):
                 print(f"[bold dark_turquoise]{PACKAGE_TITLE}")
                 print(":white_exclamation_mark:",
                       "[red blink][bold]Error:[/bold] Invalid name, try again.")
+        else:
+            print(f"[bold dark_turquoise]{PACKAGE_TITLE}")
+            print(":white_exclamation_mark:",
+                  "[red blink][bold]Error:[/bold] Invalid command, try again.")
 
 
 def packages_name_menu_options(package):
