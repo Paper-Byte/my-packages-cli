@@ -22,7 +22,6 @@ def reset_database():
     Package.create("Redux", "npm install @reduxjs/toolkit", react.id)
     Package.create("React-Redux", "npm install react-redux", react.id)
     Package.create("HowlerJS", "npm install howler", vainilla_js.id)
-    Package.create("HowlerJS", "npm install howler", vainilla_js.id)
     Package.create("PushJS", "npm install push.js --save", vainilla_js.id)
 
     with debug_progress:
