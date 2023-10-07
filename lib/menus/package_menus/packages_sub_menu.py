@@ -3,7 +3,6 @@ from models.language import Language
 from rich import print
 from menu_helpers.menu_utils import clear_screen
 import menus.package_menus.packages_main_menu  # packages_main_menu()
-import menus.package_menus.package_crud_menu  # package_crud_menu
 import pyfiglet
 
 
@@ -26,7 +25,14 @@ def packages_sub_menu(package):
         elif ((choice.lower() == "l") or (choice.lower() == "lan")):
             pass
         elif ((choice.lower() == "d") or (choice.lower() == "del")):
-            pass
+            print(":white_exclamation_mark:", "[red blink] Are you sure? Y/N")
+            if (choice.lower() == 'y'):
+                pass
+            elif (choice.lower() == 'n'):
+                packages_sub_menu(package)
+            else:
+                print(":white_exclamation_mark:",
+                      "[red blink][bold]Error:[/bold] Invalid option, try again.")
         else:
             print(f"[bold dark_turquoise]{PACKAGE_TITLE}")
             print(":white_exclamation_mark:",
