@@ -1,11 +1,8 @@
 <div align="center">
-  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWFmbm9rbmVha3k4ZXBteXhqbGg2YjJwcW1jcmR0bnBkYWM4NmVvbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/K2As63sn9ADaQo368f/giphy.gif" width="500" height="150"/>
-</div>
-<div align='center'>
-    <h1>My Packages CLI
-    <img src='./assets/wired-outline-1103-confetti (1).gif' alt='Title GIF'  />
-    </h1> 
-</div>
+
+ <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWFmbm9rbmVha3k4ZXBteXhqbGg2YjJwcW1jcmR0bnBkYWM4NmVvbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/K2As63sn9ADaQo368f/giphy.gif" width="500" height="150"/>
+
+<h1>My Packages CLI</h1>
 
 My Packages is a Python-based CLI that allows you to store packages in a local relational database. The database is ran using SQLite3, making it quick and easy to spin up locally. All CRUD operations are performed through the CLI. You can also directly install packages that have been saved to the local DB to any project you wish.
 
@@ -67,3 +64,5 @@ Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
+
+</div>
