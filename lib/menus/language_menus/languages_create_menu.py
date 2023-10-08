@@ -18,7 +18,8 @@ def languages_name_create_menu():
         elif (not choice.isnumeric()):
             if (len(choice) <= 20):
                 new_language_name = choice
-                menus.language_menus.languages_create_confirm_menu
+                menus.language_menus.languages_create_confirm_menu.languages_confirm_create_menu(
+                    new_language_name)
             else:
                 print(f"[bold dark_turquoise]{LANGUAGE_CREATE}")
                 print(":white_exclamation_mark:",

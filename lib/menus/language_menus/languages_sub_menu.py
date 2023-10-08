@@ -21,7 +21,8 @@ def languages_sub_menu(language):
         if ((choice.lower() == "b") or (choice.lower() == "back")):
             menus.language_menus.languages_main_menu.languages_main_menu()
         elif ((choice.lower() == "n") or (choice.lower() == "nam")):
-            pass
+            menus.language_menus.languages_name_menu.languages_name_menu(
+                language)
         elif ((choice.lower() == "d") or (choice.lower() == "del")):
             while True:
                 warning_message()

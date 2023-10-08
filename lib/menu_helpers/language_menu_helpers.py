@@ -34,6 +34,6 @@ def create_new_language(new_language_name):
     clear_screen()
     Language.create(new_language_name)
     print(
-        f"[bold][magenta]{new_language_name} package created!")
+        f"[bold][magenta]{new_language_name} language created!")
     time.sleep(2)
     menus.language_menus.languages_main_menu.languages_main_menu()
