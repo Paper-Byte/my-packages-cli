@@ -1,26 +1,25 @@
-from ascii_titles import PACKAGE_CREATE
+from ascii_titles import LANGUAGE_CREATE
 from rich import print
 from menu_helpers.menu_utils import clear_screen
-from menu_helpers.packages_menu_helpers import create_new_package
-import menus.package_menus.packages_language_create_menu
-import menus.package_menus.packages_main_menu
+from menu_helpers.language_menu_helpers import create_new_language
+import menus.language_menus.languages_create_menu
+import menus.language_menus.languages_main_menu
 
 
-def packages_confirm_create_menu(new_package_name, new_package_command, new_package_language_name, new_package_language_id):
+def languages_confirm_create_menu(new_package_name):
     clear_screen()
-    print(f"[bold][dark_turquoise]{PACKAGE_CREATE}")
+    print(f"[bold][dark_turquoise]{LANGUAGE_CREATE}")
     while True:
         packages_confirm_create_menu_options(
-            new_package_name, new_package_command, new_package_language_name)
+            new_package_name)
         choice = input("Y/N :> ")
         if (choice.lower() == "n"):
-            menus.package_menus.packages_language_create_menu.packages_language_create_menu(
-                new_package_name, new_package_command)
+            menus.language_menus.languages_create_menu.languages_name_create_menu()
         elif (choice.lower() == 'y'):
-            create_new_package(
-                new_package_name, new_package_command, new_package_language_id)
+            create_new_language(
+                new_package_name)
         else:
-            print(f"[bold dark_turquoise]{PACKAGE_CREATE}")
+            print(f"[bold dark_turquoise]{LANGUAGE_CREATE}")
             print(":white_exclamation_mark:",
                   "[red blink][bold]Error:[/bold] Invalid option, try again.")
 
