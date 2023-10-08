@@ -32,6 +32,7 @@ def dev_menu():
                 elif (choice.lower() == 'n'):
                     dev_menu()
         else:
+            menu_helpers.menu_utils.clear_screen()
             print(f"[bold dark_turquoise]{DEVELOPER}")
             print(":white_exclamation_mark:",
                   "[red blink][bold]Error:[/bold] Invalid option, try again.")

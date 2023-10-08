@@ -23,12 +23,14 @@ def packages_main_menu():
                 menus.package_menus.packages_sub_menu.packages_sub_menu(
                     Package.find_by_id(int(choice)))
             else:
+                clear_screen()
                 print(f"[bold dark_turquoise]{PACKAGE}")
                 print(":white_exclamation_mark:",
                       "[red blink][bold]Error:[/bold] Invalid package option, try again.")
         elif ((choice.lower() == "i") or (choice.lower() == "install")):
             menus.package_menus.packages_install_choice_menu.packages_install_choice_menu()
         else:
+            clear_screen()
             print(f"[bold dark_turquoise]{PACKAGE}")
             print(":white_exclamation_mark:",
                   "[red blink][bold]Error:[/bold] Invalid command, try again.")

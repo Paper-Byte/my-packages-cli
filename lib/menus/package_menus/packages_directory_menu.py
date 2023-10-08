@@ -22,6 +22,7 @@ def packages_directory_menu(package):
             menus.package_menus.packages_install_confirm_menu.packages_install_confirm_menu(
                 package, package_language, directory)
         else:
+            clear_screen()
             print(f"[bold dark_turquoise]{INSTALL_PACKAGE}")
             print(":white_exclamation_mark:",
                   "[red blink][bold]Error:[/bold] Invalid path, try again.")

@@ -18,6 +18,7 @@ def packages_install_confirm_menu(package, package_language, directory):
         elif (choice.lower() == 'y'):
             install_package(package, directory)
         else:
+            clear_screen()
             print(f"[bold dark_turquoise]{INSTALL_PACKAGE}")
             print(":white_exclamation_mark:",
                   "[red blink][bold]Error:[/bold] Invalid option, try again.")

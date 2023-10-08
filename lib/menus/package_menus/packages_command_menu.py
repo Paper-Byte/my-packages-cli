@@ -22,10 +22,12 @@ def packages_command_menu(package):
                 menu_helpers.packages_menu_helpers.update_package_command(
                     package, choice)
             else:
+                clear_screen()
                 print(f"[bold dark_turquoise]{PACKAGE_TITLE}")
                 print(":white_exclamation_mark:",
                       "[red blink][bold]Error:[/bold] Invalid name, try again.")
         else:
+            clear_screen()
             print(f"[bold dark_turquoise]{PACKAGE_TITLE}")
             print(":white_exclamation_mark:",
                   "[red blink][bold]Error:[/bold] Invalid command, try again.")

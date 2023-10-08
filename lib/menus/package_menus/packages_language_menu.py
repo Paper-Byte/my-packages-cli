@@ -25,10 +25,12 @@ def packages_language_menu(package):
                 menu_helpers.packages_menu_helpers.update_package_language(
                     package, int(choice))
             else:
+                clear_screen()
                 print(f"[bold dark_turquoise]{PACKAGE_TITLE}")
                 print(":white_exclamation_mark:",
                       f"[red blink][bold]Error:[/bold] Invalid option, try again. INT must be in range of 1-{str(len(ALL_LANGUAGES))}")
         else:
+            clear_screen()
             print(f"[bold dark_turquoise]{PACKAGE_TITLE}")
             print(":white_exclamation_mark:",
                   "[red blink][bold]Error:[/bold] Invalid command, try again.")

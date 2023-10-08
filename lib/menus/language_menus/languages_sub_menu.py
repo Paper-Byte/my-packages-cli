@@ -44,6 +44,7 @@ def languages_sub_menu(language):
                     time.sleep(2)
                     menus.language_menus.languages_main_menu.languages_main_menu()
         else:
+            clear_screen()
             print(f"[bold dark_turquoise]{LANGUAGE_TITLE}")
             print(":white_exclamation_mark:",
                   "[red blink][bold]Error:[/bold] Invalid option, try again.")

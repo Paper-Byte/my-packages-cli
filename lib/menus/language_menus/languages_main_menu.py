@@ -22,11 +22,13 @@ def languages_main_menu():
                 menus.language_menus.languages_sub_menu.languages_sub_menu(
                     Language.find_by_id(int(choice)))
             else:
+                clear_screen()
                 print(f"[bold dark_turquoise]{LANGUAGE}")
                 print(":white_exclamation_mark:",
                       "[red blink][bold]Error:[/bold] Invalid package option, try again.")
 
         else:
+            clear_screen()
             print(f"[bold dark_turquoise]{LANGUAGE}")
             print(":white_exclamation_mark:",
                   "[red blink][bold]Error:[/bold] Invalid option, try again.")

@@ -20,6 +20,7 @@ def packages_confirm_create_menu(new_package_name, new_package_command, new_pack
             create_new_package(
                 new_package_name, new_package_command, new_package_language_id)
         else:
+            clear_screen()
             print(f"[bold dark_turquoise]{PACKAGE_CREATE}")
             print(":white_exclamation_mark:",
                   "[red blink][bold]Error:[/bold] Invalid option, try again.")

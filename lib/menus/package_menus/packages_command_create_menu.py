@@ -23,10 +23,12 @@ def packages_command_create_menu(new_package_name):
                 menus.package_menus.packages_language_create_menu.packages_language_create_menu(
                     new_package_name, new_package_command)
             else:
+                clear_screen()
                 print(f"[bold dark_turquoise]{PACKAGE_CREATE}")
                 print(":white_exclamation_mark:",
                       "[red blink][bold]Error:[/bold] Invalid command, try again.")
         else:
+            clear_screen()
             print(f"[bold dark_turquoise]{PACKAGE_CREATE}")
             print(":white_exclamation_mark:",
                   "[red blink][bold]Error:[/bold] Invalid command, try again.")

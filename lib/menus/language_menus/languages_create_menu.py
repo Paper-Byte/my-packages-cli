@@ -21,10 +21,12 @@ def languages_name_create_menu():
                 menus.language_menus.languages_create_confirm_menu.languages_confirm_create_menu(
                     new_language_name)
             else:
+                clear_screen()
                 print(f"[bold dark_turquoise]{LANGUAGE_CREATE}")
                 print(":white_exclamation_mark:",
                       "[red blink][bold]Error:[/bold] Invalid name, try again.")
         else:
+            clear_screen()
             print(f"[bold dark_turquoise]{LANGUAGE_CREATE}")
             print(":white_exclamation_mark:",
                   "[red blink][bold]Error:[/bold] Invalid command, try again.")

@@ -19,10 +19,12 @@ def packages_install_choice_menu():
                 menus.package_menus.packages_directory_menu.packages_directory_menu(
                     Package.find_by_id(int(choice)))
             else:
+                clear_screen()
                 print(f"[bold dark_turquoise]{INSTALL_PACKAGE}")
                 print(":white_exclamation_mark:",
                       "[red blink][bold]Error:[/bold] Invalid package option, try again.")
         else:
+            clear_screen()
             print(f"[bold dark_turquoise]{INSTALL_PACKAGE}")
             print(":white_exclamation_mark:",
                   "[red blink][bold]Error:[/bold] Invalid command, try again.")

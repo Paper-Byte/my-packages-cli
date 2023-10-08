@@ -19,6 +19,7 @@ def languages_confirm_create_menu(new_language_name):
             create_new_language(
                 new_language_name)
         else:
+            clear_screen()
             print(f"[bold dark_turquoise]{LANGUAGE_CREATE}")
             print(":white_exclamation_mark:",
                   "[red blink][bold]Error:[/bold] Invalid option, try again.")

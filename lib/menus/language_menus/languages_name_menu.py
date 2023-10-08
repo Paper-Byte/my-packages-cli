@@ -22,10 +22,12 @@ def languages_name_menu(language):
                 menu_helpers.language_menu_helpers.update_language_name(
                     language, choice)
             else:
+                clear_screen()
                 print(f"[bold dark_turquoise]{LANGUAGE_TITLE}")
                 print(":white_exclamation_mark:",
                       "[red blink][bold]Error:[/bold] Invalid name, try again.")
         else:
+            clear_screen()
             print(f"[bold dark_turquoise]{LANGUAGE_TITLE}")
             print(":white_exclamation_mark:",
                   "[red blink][bold]Error:[/bold] Invalid command, try again.")
