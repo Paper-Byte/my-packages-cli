@@ -1,4 +1,4 @@
-from models.package import Package
+from models.packages import Package
 from rich import print
 from menu_helpers.menu_utils import clear_screen
 from ascii_titles import PACKAGE

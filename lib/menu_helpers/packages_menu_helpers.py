@@ -1,6 +1,6 @@
 from utils.custom_progresses import new_progress
 from menu_helpers.menu_utils import clear_screen
-from models.package import Package
+from models.packages import Package
 from models.language import Language
 from rich import print
 from shlex import split

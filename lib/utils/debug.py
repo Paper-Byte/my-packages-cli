@@ -1,5 +1,5 @@
 from models.language import Language
-from models.package import Package
+from models.packages import Package
 from utils.custom_progresses import debug_progress
 import time
 import ipdb
