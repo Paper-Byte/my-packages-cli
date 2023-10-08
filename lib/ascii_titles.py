@@ -11,3 +11,5 @@ DEVELOPER = pyfiglet.figlet_format('Developer Tools', font='mini')
 PACKAGE_CREATE = pyfiglet.figlet_format('Create Package', font='mini')
 
 LANGUAGE_CREATE = pyfiglet.figlet_format('Create Language', font='mini')
+
+INSTALL_PACKAGE = pyfiglet.figlet_format('Install Package', font='mini')
