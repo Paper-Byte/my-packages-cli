@@ -1,4 +1,4 @@
-<div display='in-line'><h1 display='in-line'>My Packages CLI</h1> <img src='./assets/wired-outline-1103-confetti (1).gif' alt='Title GIF' display='in-line' /></div>
+<div display='in-line block'><h1 display='in-line'>My Packages CLI</h1> <img src='./assets/wired-outline-1103-confetti (1).gif' alt='Title GIF' display='in-line' /></div>
 
 My Packages is a Python-based CLI that allows you to store packages in a local relational database. The database is ran using SQLite3, making it quick and easy to spin up locally. All CRUD operations are performed through the CLI. You can also directly install packages that have been saved to the local DB to any project you wish.
 
