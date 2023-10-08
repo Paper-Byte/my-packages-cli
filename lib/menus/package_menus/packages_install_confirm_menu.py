@@ -16,7 +16,7 @@ def packages_install_confirm_menu(package, package_language, directory):
             menus.package_menus.packages_directory_menu.packages_directory_menu(
                 package)
         elif (choice.lower() == 'y'):
-            pass
+            install_package(package, directory)
         else:
             print(f"[bold dark_turquoise]{INSTALL_PACKAGE}")
             print(":white_exclamation_mark:",

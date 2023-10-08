@@ -3,6 +3,7 @@ from menu_helpers.menu_utils import clear_screen
 from models.package import Package
 from models.language import Language
 from rich import print
+from shlex import split
 import menus.package_menus.packages_sub_menu
 import menus.package_menus.packages_main_menu
 import subprocess
@@ -77,10 +78,9 @@ def create_new_package(new_package_name, new_package_command, new_package_langua
 
 
 def install_package(package, directory):
-    install_command = package.command.split()
-    install_command[0] = install_command[0] + " "
-    install_command[1] = install_command[1] + " "
-    install_run = subprocess.Popen(install_command, cwd=directory)
+    install_command = split(package.command)
+    install_run = subprocess.Popen(
+        install_command, cwd=directory)
     exit_code = install_run.wait()
     print(":white_exclamation_mark:", '[bold spring_green3]Install succeeded!') if exit_code == 0 else print(
         '[red blink][bold]Install failed!')
