@@ -25,7 +25,9 @@ From there follow CLI options with user input to navigate and execute commands
 ## Visuals
 
 _Main Menu_
-![Main Menu](https://i.ibb.co/HGSD8Tr/Screenshot-2023-10-08-at-2-17-25-PM.png)
+
+<!-- ![Main Menu](https://i.ibb.co/HGSD8Tr/Screenshot-2023-10-08-at-2-17-25-PM.png) -->
+<img src="https://i.ibb.co/HGSD8Tr/Screenshot-2023-10-08-at-2-17-25-PM.png" alt='Main Menu' width='200px' height='auto'/>
 
 _Language Menu_
 ![Language Menu](https://i.ibb.co/VpCJ2HX/Screenshot-2023-10-08-at-1-32-43-PM.png)
