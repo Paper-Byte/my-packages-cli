@@ -24,14 +24,10 @@ def languages_confirm_create_menu(new_package_name):
                   "[red blink][bold]Error:[/bold] Invalid option, try again.")
 
 
-def packages_confirm_create_menu_options(new_package_name, new_package_command, new_package_language_name):
+def packages_confirm_create_menu_options(new_language_name):
     print("[dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53]")
     print(
-        f"[magenta]*[/magenta]  [dark_turquoise]Name: [/dark_turquoise][grey53]{new_package_name if new_package_name != '' else 'None'}")
-    print(
-        f"[magenta]*[/magenta]  [dark_turquoise]Command: [/dark_turquoise][grey53]{new_package_command if new_package_command != '' else 'None'}")
-    print(
-        f"[magenta]*[/magenta]  [dark_turquoise]Language: [/dark_turquoise][grey53]{new_package_language_name if new_package_language_name != '' else 'None'}")
+        f"[magenta]*[/magenta]  [dark_turquoise]Name: [/dark_turquoise][grey53]{new_language_name if new_language_name != '' else 'None'}")
     print("[dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53]")
     print("[grey53]*[/grey53]")
     print(
