@@ -26,17 +26,19 @@ From there follow CLI options with user input to navigate and execute commands
 
 _Main Menu_
 
-<!-- ![Main Menu](https://i.ibb.co/HGSD8Tr/Screenshot-2023-10-08-at-2-17-25-PM.png) -->
-<img src="https://i.ibb.co/HGSD8Tr/Screenshot-2023-10-08-at-2-17-25-PM.png" alt='Main Menu' width='200px' height='auto'/>
+<img src="https://imageupload.io/ib/LzX763vmASk5wOY_1696790474.png" alt="Language Menu" width='500px' height='300px' />
 
 _Language Menu_
-![Language Menu](https://i.ibb.co/VpCJ2HX/Screenshot-2023-10-08-at-1-32-43-PM.png)
+
+<img src="https://i.ibb.co/VpCJ2HX/Screenshot-2023-10-08-at-1-32-43-PM.png" alt="Language Menu" width='500px' height='300px' />
 
 _Package Menu_
-![Package Menu](https://i.ibb.co/Xbkn46W/Screenshot-2023-10-08-at-1-33-03-PM.png)
+
+<img src="https://i.ibb.co/Xbkn46W/Screenshot-2023-10-08-at-1-33-03-PM.png" alt="Package Menu" width='500px' height='300px' />
 
 _Dev Menu_
-![Dev Menu](https://i.ibb.co/vsgC5mL/Screenshot-2023-10-08-at-1-33-27-PM.png)
+
+<img src="https://i.ibb.co/vsgC5mL/Screenshot-2023-10-08-at-1-33-27-PM.png" alt="Dev Menu" width='500px' height='300px' />
 
 ## Roadmap
 
