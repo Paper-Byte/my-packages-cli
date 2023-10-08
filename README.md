@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWFmbm9rbmVha3k4ZXBteXhqbGg2YjJwcW1jcmR0bnBkYWM4NmVvbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/K2As63sn9ADaQo368f/giphy.gif" width="500" height="150"/>
 </div>
-<div align='center>
+<div align='center'>
     <h1>My Packages CLI</h1> 
     <img src='./assets/wired-outline-1103-confetti (1).gif' alt='Title GIF'  />
 </div>
