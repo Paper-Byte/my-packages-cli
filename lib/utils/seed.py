@@ -35,6 +35,5 @@ def seed_database():
             new_seed_progress.update(seeding, advance=0.5)
             time.sleep(0.02)
     clear_screen()
-    print(f"[bold dark_turquoise]{DEVELOPER}")
     print("[bold spring_green3]Seeded database!", ":seedling:")
     time.sleep(1.5)

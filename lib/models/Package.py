@@ -56,11 +56,11 @@ class Package:
 
     @language_id.setter
     def language_id(self, language_id):
-        if type(language_id) is int and Language.find_by_id(language_id):
+        if (type(language_id) is int and Language.find_by_id(language_id)) or (language_id == None):
             self._language_id = language_id
         else:
             raise ValueError(
-                "language_id must reference a language in the database")
+                "language_id must reference a language in the database or be none")
 
     @classmethod
     def create_table(cls):

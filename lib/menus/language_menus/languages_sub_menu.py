@@ -36,12 +36,12 @@ def languages_sub_menu(language):
                             time.sleep(0.02)
                     clear_screen()
                     for package in LANGUAGE_PACKAGES:
-                        package.language_id = None
+                        package.delete()
                     language.delete()
                     print(
                         f"[bold][magenta]Package was deleted!")
                     time.sleep(2)
-                    menus.package_menus.packages_main_menu.packages_main_menu()
+                    menus.language_menus.languages_main_menu.languages_main_menu()
         else:
             print(f"[bold dark_turquoise]{LANGUAGE_TITLE}")
             print(":white_exclamation_mark:",
