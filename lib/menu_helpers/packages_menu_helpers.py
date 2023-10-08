@@ -1,8 +1,10 @@
 from utils.custom_progresses import new_progress
 from menu_helpers.menu_utils import clear_screen
+from models.package import Package
 from models.language import Language
 from rich import print
-import menus.package_menus.packages_sub_menu  # packages_sub_menu()
+import menus.package_menus.packages_sub_menu
+import menus.package_menus.packages_main_menu
 import time
 
 
@@ -54,3 +56,20 @@ def update_package_language(package, choice):
         f"[bold][magenta]Package language updated to '{current_owner.name}'!")
     time.sleep(2)
     menus.package_menus.packages_sub_menu.packages_sub_menu(package)
+
+
+def create_new_package(new_package_name, new_package_command, new_package_language_id):
+    new_package_create_progress = new_progress()
+    with new_package_create_progress:
+        language = new_package_create_progress.add_task(
+            "[italic][magenta]Create new package[/italic][magenta][dark_turqoise]...[/dark_turqoise]", total=20)
+        while not new_package_create_progress.finished:
+            new_package_create_progress.update(language, advance=0.5)
+            time.sleep(0.02)
+    clear_screen()
+    Package.create(new_package_name, new_package_command,
+                   new_package_language_id)
+    print(
+        f"[bold][magenta]{new_package_name} package created!")
+    time.sleep(2)
+    menus.package_menus.packages_main_menu.packages_main_menu()

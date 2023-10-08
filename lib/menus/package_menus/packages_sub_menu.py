@@ -39,9 +39,9 @@ def packages_sub_menu(package):
                     with package_del_progress:
                         delete = package_del_progress.add_task(
                             "[italic][magenta]Deleting package[/italic][magenta][dark_turqoise]...[/dark_turqoise]", total=20)
-                    while not package_del_progress.finished:
-                        package_del_progress.update(delete, advance=0.5)
-                        time.sleep(0.02)
+                        while not package_del_progress.finished:
+                            package_del_progress.update(delete, advance=0.5)
+                            time.sleep(0.02)
                     clear_screen()
                     package.delete()
                     print(
@@ -62,11 +62,11 @@ def packages_sub_menu(package):
 def packages_crud_menu_options(package, PACKAGE_OWNER):
     print("[dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53]")
     print(
-        f"[magenta]*[/magenta]  [grey53]Name: [/grey53][dark_turquoise]{package.name}")
+        f"[magenta]*[/magenta]  [dark_turquoise]Name: [/dark_turquoise][grey53]{package.name}")
     print(
-        f"[magenta]*[/magenta]  [grey53]Command: [/grey53][dark_turquoise]{package.command}")
+        f"[magenta]*[/magenta]  [dark_turquoise]Command: [/dark_turquoise][grey53]{package.command}")
     print(
-        f"[magenta]*[/magenta]  [grey53]Language: [/grey53][dark_turquoise]{PACKAGE_OWNER.name}")
+        f"[magenta]*[/magenta]  [dark_turquoise]Language: [/dark_turquoise][grey53]{PACKAGE_OWNER.name}")
     print("[dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53]")
     print("[grey53]*[/grey53]")
     print('[dark_turquoise]*[/dark_turquoise]  [bold][dark_turquoise]"back" [magenta][italic]OR[/italic][/magenta] "b"[/bold][/dark_turquoise][grey53] to return to the previous menu',

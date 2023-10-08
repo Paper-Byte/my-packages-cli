@@ -1,8 +1,8 @@
 from rich import print
 from models.language import Language
 from menu_helpers.menu_utils import clear_screen
-import menu_helpers.packages_menu_helpers  # update_package_language()
-import menus.package_menus.packages_sub_menu  # packages_sub_menu()
+import menu_helpers.packages_menu_helpers
+import menus.package_menus.packages_sub_menu
 import pyfiglet
 
 ALL_LANGUAGES = Language.get_all()
@@ -38,7 +38,7 @@ def packages_language_menu_options(current_owner):
     print("[dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53]")
     for language in ALL_LANGUAGES:
         print(
-            f"[magenta]*[/magenta] [bold][grey53]{language.id}:[/bold][/grey53] [dark_turquoise]{language.name}")
+            f"[magenta]*[/magenta] [bold][dark_turquoise]{language.id}:[/bold][/dark_turquoise] [grey53]{language.name}")
     print(
         f"[magenta]*[/magenta]  [grey53]Current Language: [/grey53][dark_turquoise]{current_owner.name}")
     print("[dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53]")
