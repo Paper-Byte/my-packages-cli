@@ -74,11 +74,11 @@ def packages_crud_menu_options(package, PACKAGE_OWNER):
     print('[dark_turquoise]*[/dark_turquoise]  [bold][dark_turquoise]"back" [magenta][italic]OR[/italic][/magenta] "b"[/bold][/dark_turquoise][grey53] to return to the previous menu',
           ':right_arrow_curving_left:')
     print(
-        '[grey53]*[/grey53]  [bold][dark_turquoise]"name" [magenta][italic]OR[/italic][/magenta] "n"[/bold][/dark_turquoise][grey53] to update package name', ':fountain_pen:')
+        '[grey53]*[/grey53]  [bold][dark_turquoise]"name" [magenta][italic]OR[/italic][/magenta] "n"[/bold][/dark_turquoise][grey53] to update package name', ':gear:')
     print(
-        '[dark_turquoise]*[/dark_turquoise]  [bold][dark_turquoise]"com" [magenta][italic]OR[/italic][/magenta] "c"[/bold][/dark_turquoise][grey53] to update a package command', ':fountain_pen:')
+        '[dark_turquoise]*[/dark_turquoise]  [bold][dark_turquoise]"com" [magenta][italic]OR[/italic][/magenta] "c"[/bold][/dark_turquoise][grey53] to update a package command', ':gear:')
     print(
-        '[grey53]*[/grey53]  [bold][dark_turquoise]"lan" [magenta][italic]OR[/italic][/magenta] "l"[/bold][/dark_turquoise][grey53] to change a package language', ':fountain_pen:')
+        '[grey53]*[/grey53]  [bold][dark_turquoise]"lan" [magenta][italic]OR[/italic][/magenta] "l"[/bold][/dark_turquoise][grey53] to change a package language', ':gear:')
     print(
         '[dark_turquoise]*[/dark_turquoise]  [bold][dark_turquoise]"del" [magenta][italic]OR[/italic][/magenta] "d"[/bold][/dark_turquoise][grey53] to delete the package', ':cross_mark:')
     print("[grey53]*[/grey53]")

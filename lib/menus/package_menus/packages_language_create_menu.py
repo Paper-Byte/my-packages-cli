@@ -54,6 +54,6 @@ def packages_language_create_menu_options(new_package_name, new_package_command,
     print('[dark_turquoise]*[/dark_turquoise]  [bold][dark_turquoise]"back" [magenta][italic]OR[/italic][/magenta] "b"[/bold][/dark_turquoise][grey53] to return to the previous menu',
           ':right_arrow_curving_left:')
     print(
-        f'[grey53]*[/grey53]  [bold][dark_turquoise]INT[/bold][/dark_turquoise][grey53] to set the package language [italic]*int in range of 1 - {str(len(all_languages))}*[/italic]', ':robot:')
+        f'[grey53]*[/grey53]  [bold][dark_turquoise]INT[/bold][/dark_turquoise][grey53] to set the package language [italic]*int in range of 1 - {str(len(all_languages))}*[/italic]', ':fountain_pen:')
     print("[dark_turquoise]*[/dark_turquoise]")
     print("[grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise]")
