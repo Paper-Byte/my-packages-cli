@@ -56,9 +56,9 @@ pip
 
 Support for custom templates that can be shard to come
 
-Make this into an open source project once finished with school.
-
 _ex: barebones react with just redux and react-icons_
+
+Make this into an open source project once finished with school.
 
 <h2>Contributing</h2> <img src='./assets/wired-outline-35-edit.gif' alt='Contributing GIF' />
 

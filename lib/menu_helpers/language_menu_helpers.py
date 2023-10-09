@@ -18,7 +18,8 @@ def update_language_name(language, choice):
     clear_screen()
     language.name = choice
     language.update()
-    print(f"[bold][magenta]Language name updated to '{choice}'!")
+    print(f":floppy_disk:",
+          "[bold][magenta]Language name updated to '{choice}'!")
     time.sleep(2)
     menus.language_menus.languages_sub_menu.languages_sub_menu(language)
 
@@ -34,6 +35,6 @@ def create_new_language(new_language_name):
     clear_screen()
     Language.create(new_language_name)
     print(
-        f"[bold][magenta]{new_language_name} language created!")
+        f":open_book:", "[bold][magenta]{new_language_name} language created!")
     time.sleep(2)
     menus.language_menus.languages_main_menu.languages_main_menu()
