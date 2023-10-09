@@ -44,6 +44,8 @@ _Dev Menu_
 
 <img src="https://i.ibb.co/vsgC5mL/Screenshot-2023-10-08-at-1-33-27-PM.png" alt="Dev Menu" width='500px' height='300px' />
 
+[Brief walkthrough video](https://youtu.be/036axs22Nvo)
+
 <h2>Roadmap</h2> <img src='./assets/wired-outline-27-globe.gif' alt='Roadmap GIF' />
 
 Support for other package mangers to come
