@@ -21,8 +21,8 @@ def update_package_name(package, choice):
     clear_screen()
     package.name = choice
     package.update()
-    print(f":floppy_disk:",
-          "[bold][magenta]Package name updated to '{choice}'!")
+    print(":floppy_disk:",
+          f"[bold][magenta]Package name updated to '{choice}'!")
     time.sleep(2)
     menus.package_menus.packages_sub_menu.packages_sub_menu(package)
 
@@ -38,8 +38,8 @@ def update_package_command(package, choice):
     clear_screen()
     package.command = choice
     package.update()
-    print(f":floppy_disk:",
-          "[bold][magenta]Package command updated to '{choice}'!")
+    print(":floppy_disk:",
+          f"[bold][magenta]Package command updated to '{choice}'!")
     time.sleep(2)
     menus.package_menus.packages_sub_menu.packages_sub_menu(package)
 
@@ -57,7 +57,7 @@ def update_package_language(package, choice):
     package.language_id = current_owner.id
     package.update()
     print(
-        f":floppy_disk:", "[bold][magenta]Package language updated to '{current_owner.name}'!")
+        ":floppy_disk:", f"[bold][magenta]Package language updated to '{current_owner.name}'!")
     time.sleep(2)
     menus.package_menus.packages_sub_menu.packages_sub_menu(package)
 
@@ -74,7 +74,7 @@ def create_new_package(new_package_name, new_package_command, new_package_langua
     Package.create(new_package_name, new_package_command,
                    new_package_language_id)
     print(
-        f":floppy_disk:", "[bold][magenta]{new_package_name} package created!")
+        ":floppy_disk:", f"[bold][magenta]{new_package_name} package created!")
     time.sleep(2)
     menus.package_menus.packages_main_menu.packages_main_menu()
 
