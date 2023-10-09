@@ -139,7 +139,7 @@ class Language:
 
     def packages(self):
 
-        from models.package import Package
+        from models.packages import Package
 
         sql = """
             SELECT *
