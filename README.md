@@ -54,6 +54,8 @@ yarn
 pip
 ```
 
+Transition all menu functions to classes
+
 Support for custom templates that can be shard to come
 
 _ex: barebones react with just redux and react-icons_
