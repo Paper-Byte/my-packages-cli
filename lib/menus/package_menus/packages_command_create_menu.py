@@ -47,6 +47,6 @@ def packages_command_create_menu_options(new_package_name, new_package_command, 
     print('[dark_turquoise]*[/dark_turquoise]  [bold][dark_turquoise]"back" [magenta][italic]OR[/italic][/magenta] "b"[/bold][/dark_turquoise][grey53] to return to the previous menu',
           ':right_arrow_curving_left:')
     print(
-        '[grey53]*[/grey53]  [bold][dark_turquoise]INPUT[/bold][/dark_turquoise][grey53] to set the package command [italic]*max 20 chars / min 1 char*[/italic]', ':robot:')
+        '[grey53]*[/grey53]  [bold][dark_turquoise]INPUT[/bold][/dark_turquoise][grey53] to set the package command [italic]*max 20 chars / min 1 char*[/italic]', ':fountain_pen:')
     print("[dark_turquoise]*[/dark_turquoise]")
     print("[grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise][grey53]*[/grey53][dark_turquoise]*[/dark_turquoise]")
