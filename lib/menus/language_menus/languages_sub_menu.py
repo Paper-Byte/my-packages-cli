@@ -42,6 +42,11 @@ def languages_sub_menu(language):
                         f"[bold][magenta]Package was deleted!")
                     time.sleep(2)
                     menus.language_menus.languages_main_menu.languages_main_menu()
+                elif (choice.lower() == 'n'):
+                    languages_sub_menu(language)
+                else:
+                    print(":white_exclamation_mark:",
+                          "[red blink][bold]Error:[/bold] Invalid option, try again.")
         else:
             clear_screen()
             print(f"[bold dark_turquoise]{LANGUAGE_TITLE}")

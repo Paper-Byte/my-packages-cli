@@ -51,7 +51,6 @@ def packages_sub_menu(package):
                 elif (choice.lower() == 'n'):
                     packages_sub_menu(package)
                 else:
-                    clear_screen()
                     print(":white_exclamation_mark:",
                           "[red blink][bold]Error:[/bold] Invalid package option, try again.")
         else:
